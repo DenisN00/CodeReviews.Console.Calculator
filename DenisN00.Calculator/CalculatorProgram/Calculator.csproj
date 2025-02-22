@@ -8,7 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="C:\Users\DenyN\Desktop\IT-Leben\CS-Projekte\CodeReview\CodeReviews.Console.Calculator\DenisN00.Calculator\CalculatorLibrary\CalculatorLibrary.csproj" />
+    <ProjectReference Include="C:\Users\DenyN\iCloudDrive\IT-Leben\CS-Projekte\CodeReview\CodeReviews.Console.Calculator\DenisN00.Calculator\CalculatorLibrary\CalculatorLibrary.csproj" />
+    <ProjectReference Include="/Users/denisnakic/Library/Mobile Documents/com~apple~CloudDocs/IT-Leben/CS-Projekte/CodeReview/CodeReviews.Console.Calculator/DenisN00.Calculator/CalculatorLibrary/CalculatorLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="0.49.1" />
   </ItemGroup>
 
 
