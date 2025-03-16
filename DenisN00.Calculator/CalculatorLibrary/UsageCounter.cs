@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 using System.Runtime.InteropServices;
 using System.Text.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
+using static System.Console;
 
 namespace CalculatorLibrary
 {
@@ -18,7 +19,7 @@ namespace CalculatorLibrary
         public static string filePath = "UsageCounter.json";
         // public static string jsonData = File.ReadAllText(filePath);
 
-        public static void Incrementation()
+        public static void Increment()
         {
             string jsonData = File.ReadAllText(filePath);
 
@@ -26,11 +27,25 @@ namespace CalculatorLibrary
             
             deserialized.Counter++;
 
-            Console.WriteLine($"The Calculator has been used: {deserialized.Counter} times.");
+            WriteLine($"The Calculator has been used: {deserialized.Counter} times.");
             
             string updatedJsonData = JsonConvert.SerializeObject(deserialized, Formatting.Indented);
 
             File.WriteAllText(filePath, updatedJsonData);
         }
+
+        public static void Print()
+        {
+            string jsonData = File.ReadAllText(filePath);
+
+            Usages deserialized = JsonConvert.DeserializeObject<Usages>(jsonData);
+
+            WriteLine($"The Calculator has been used: {deserialized.Counter} times.");
+            
+            string updatedJsonData = JsonConvert.SerializeObject(deserialized, Formatting.Indented);
+
+            File.WriteAllText(filePath, updatedJsonData);
+        }
+
     }
 }
